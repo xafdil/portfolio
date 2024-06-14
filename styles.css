@@ -7,16 +7,20 @@ body, html {
     line-height: 1.6;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 header {
     font-weight: 700;
     background: rgba(0, 0, 0, 0.904);
     color: aliceblue;
     width: 100%;
-    padding: 1dvh 0;
-    text-align: center;
+    padding: 0.2rem 0;
     position: fixed;
-    display: flex;
     opacity: 100%;
+    display: flex;
+    justify-content: flex-start;   
 }
 
 header::after {
@@ -29,6 +33,12 @@ header::after {
     bottom: 0;
     left: 5%; /* Adjust left margin to center the border */
     right: 5%; /* Adjust right margin to center the border */
+}
+
+#link{
+    font-size: 0.9rem;
+    margin-right: 2rem;
+
 }
 
 nav ul {
@@ -66,13 +76,12 @@ p{
 #home{
     height: fit-content;
     text-align: right;
-    width: 100%;
-    font-size: 3dvh;
-    font-weight: 700;
+    width: 27rem;
+    font-size: 1.6rem;
 }
 
 #about{
-    width: 36dvh;
+    width: 15rem;
     height: fit-content;
     text-align: justify;
 }
