@@ -1,0 +1,137 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica !important;
+    color: aliceblue;
+    background-color: #000;
+    line-height: 1.6;
+}
+
+header {
+    font-weight: 700;
+    background: rgba(0, 0, 0, 0.904);
+    color: aliceblue;
+    width: 100%;
+    padding: 1dvh 0;
+    text-align: center;
+    position: fixed;
+    display: flex;
+    opacity: 100%;
+}
+
+header::after {
+    content: '';
+    display: block;
+    width: 90%; /* Adjust width as needed */
+    margin: 0 auto;
+    border-bottom: 1.5px solid #fff;
+    position: absolute;
+    bottom: 0;
+    left: 5%; /* Adjust left margin to center the border */
+    right: 5%; /* Adjust right margin to center the border */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+p{
+    font-weight: 600;
+}
+
+#home{
+    height: fit-content;
+    text-align: right;
+    width: 100%;
+    font-size: 4dvh;
+    font-weight: 700;
+}
+
+#about{
+    width: 36dvh;
+    height: fit-content;
+    text-align: justify;
+}
+
+.project1 {
+    background-image: url('https://mcdn.wallpapersafari.com/medium/29/15/9rCoDM.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#contact{
+    text-align: right;
+}
+
+#contact a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+#contact img{
+    filter: invert(100%);
+    width: 2dvh;
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px; /* Add padding to the left and right */
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer::before {
+    content: '';
+    display: block;
+    width: calc(100% - 40px); /* Full width minus padding */
+    margin: 0 auto;
+    border-top: 2px solid #fff;
+    position: absolute;
+    top: 0;
+    left: 20px; /* Match padding */
+    right: 20px; /* Match padding */
+}
+
+footer p {
+    margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+    /* Hide content on larger screens */
+    main, header, footer {
+        display: none;
+    }
+}
