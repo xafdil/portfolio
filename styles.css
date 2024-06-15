@@ -81,7 +81,7 @@ p{
 #home{
     height: fit-content;
     text-align: left;
-    width: 25rem;
+    width: 100%;
     font-size: 1.6rem;
 }
 
