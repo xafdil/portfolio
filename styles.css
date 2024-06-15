@@ -7,13 +7,22 @@ body, html {
     line-height: 1.6;
 }
 
+body{
+    background-image: url('background.webp');
+    background-color: rgba(0, 0, 0, 0.688);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+}
+
 html{
     scroll-behavior: smooth;
 }
 
 header {
     font-weight: 700;
-    background: rgba(0, 0, 0, 0.904);
+    background: rgba(0, 0, 0, 0.867);
     color: aliceblue;
     width: 100%;
     padding: 0.1rem 0;
@@ -24,7 +33,7 @@ header {
 header::after {
     content: '';
     display: block;
-    width: 90%; /* Adjust width as needed */
+    width:90%; /* Adjust width as needed */
     margin: 0 auto;
     border-bottom: 0.1rem solid #fff;
     position: absolute;
@@ -73,10 +82,13 @@ section {
 h1, h2 {
     margin-bottom: 10px;
     letter-spacing: 0.1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 p{
     font-weight: 550;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.07rem;
 }
 
 
@@ -102,6 +114,8 @@ p{
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.260);
+    background-blend-mode: darken;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
