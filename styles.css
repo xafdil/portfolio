@@ -9,7 +9,7 @@ body, html {
 
 body{
     background-image: url('background.webp');
-    background-color: rgba(0, 0, 0, 0.678);
+    background-color: rgba(0, 0, 0, 0.666);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -22,15 +22,16 @@ html{
 
 header {
     font-weight: 600;
+    font-size: 1rem;
     background: rgba(45, 45, 45, 0.108);
     color: aliceblue;
     width: 100%;
-    height: 3rem;
-    padding: 0.1rem 0;
+    text-align: center;
+    padding: auto auto;
     position: fixed;
     letter-spacing: 0.1rem;
-    backdrop-filter: blur(0.2rem); /* Adjust blur radius as needed */
-    -webkit-backdrop-filter: blur(0.2rem); /* For Safari */
+    backdrop-filter: blur(0.3rem); /* Adjust blur radius as needed */
+    -webkit-backdrop-filter: blur(0.3rem); /* For Safari */
     box-sizing: border-box;
 }
 
@@ -69,6 +70,15 @@ header nav ul li:last-child {
     margin-right: 1.5rem;
 }
 
+header #web {
+    color: aliceblue;
+    font-size: 1rem;
+    text-align: right;
+    animation: neon 1.5s infinite alternate;
+    letter-spacing: 0rem;
+}
+
+
 nav ul li a {
     color: aliceblue;
     text-decoration: none;
@@ -94,8 +104,6 @@ p{
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     letter-spacing: 0.07rem;
 }
-
-
 
 #home{
     height: fit-content;
@@ -129,14 +137,23 @@ p{
 }
 
 #contact a{
+    font-weight: 400;
     color: aliceblue;
     text-decoration: none;
+    font-size: 0.85rem;
+    transition: text-shadow 0.3s ease-in-out; /* Smooth transition for the glow effect */
+}
+
+#contact a:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 
+    0 0 10px rgba(255, 255, 255, 0.6); /* Subtle glowing effect */
 }
 
 #contact img{
     filter: invert(100%);
-    width: 2dvh;
+    width: 0.85rem;
 }
+
 
 footer {
     color: aliceblue;
@@ -166,6 +183,23 @@ footer p {
     margin: 0;
 }
 
+@keyframes neon {
+    0%, 100% {
+        text-shadow: 
+            0 0 3px rgba(255, 255, 255, 0.5),
+            0 0 5px rgba(255, 255, 255, 0.5),
+            0 0 8px rgba(238, 174, 255, 0.5), /* Pastel violet */
+            0 0 10px rgba(238, 174, 255, 0.5);
+    }
+    35% {
+        text-shadow: 
+            0 0 3px rgba(255, 255, 255, 0.3),
+            0 0 5px rgba(255, 255, 255, 0.3),
+            0 0 8px rgba(238, 174, 255, 0.3), /* Pastel violet */
+            0 0 10px rgba(238, 174, 255, 0.3);
+    }
+}
+
 @media screen and (min-width: 600px) {
     /* Hide content on larger screens */
     main, header, footer {
@@ -180,10 +214,11 @@ footer p {
         height: 100vh; /* Set the height to 100% of the viewport height */
         margin: 0; /* Remove default margin */
         padding: 0; /* Remove default padding */
+        background-color: rgba(0, 0, 0, 0.555);
     }
     /* Show a message instead */
     body::before {
-        content: "ORIENTATION IS NOT SUPPORTED yet";
+        content: "ORIENTATION IS NOT yet SUPPORTED";
         display: block;
         position: fixed;
         top: 50%;
