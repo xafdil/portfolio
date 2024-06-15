@@ -1,235 +1,60 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Helvetica !important;
-    color: aliceblue;
-    background-color: #000;
-    line-height: 1.6;
-}
-
-body{
-    background-image: url('background.webp');
-    background-color: rgba(0, 0, 0, 0.666);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-blend-mode: darken;
-}
-
-html{
-    scroll-behavior: smooth;
-}
-
-header {
-    font-weight: 600;
-    font-size: 1rem;
-    background: rgba(45, 45, 45, 0.108);
-    color: aliceblue;
-    width: 100%;
-    text-align: center;
-    padding: auto auto;
-    position: fixed;
-    letter-spacing: 0.1rem;
-    backdrop-filter: blur(0.3rem); /* Adjust blur radius as needed */
-    -webkit-backdrop-filter: blur(0.3rem); /* For Safari */
-    box-sizing: border-box;
-}
-
-header::after {
-    content: '';
-    display: block;
-    width:90%; /* Adjust width as needed */
-    margin: 0 auto;
-    border-bottom: 0.15rem solid rgba(240, 248, 255, 0.245);
-    position: absolute;
-    bottom: 0;
-    left: 5%; /* Adjust left margin to center the border */
-    right: 5%; /* Adjust right margin to center the border */
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-}
-
-header nav ul li {
-    flex: 1;
-    display: inline;
-    margin: 0 10px;
-    text-align: center;
-}
-
-header nav ul li:first-child {
-    text-align: left;
-    margin-left: 1.5rem;
-}
-
-header nav ul li:last-child {
-    text-align: right;
-    margin-right: 1.5rem;
-}
-
-header #web {
-    color: aliceblue;
-    font-size: 1rem;
-    text-align: right;
-    animation: neon 1.5s infinite alternate;
-    letter-spacing: 0rem;
-}
-
-
-nav ul li a {
-    color: aliceblue;
-    text-decoration: none;
-}
-
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-h1, h2 {
-    margin-bottom: 10px;
-    letter-spacing: 0.1rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-p{
-    font-weight: 550;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    letter-spacing: 0.07rem;
-}
-
-#home{
-    height: fit-content;
-    text-align: right;
-    width: 100%;
-    font-size: 1.6rem;
-}
-
-#about{
-    width: 17rem;
-    height: fit-content;
-    text-align: left;
-}
-
-.project1 {
-    background-image: url('https://mcdn.wallpapersafari.com/medium/29/15/9rCoDM.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.260);
-    background-blend-mode: darken;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-#contact{
-    text-align: right;
-}
-
-#contact a{
-    font-weight: 400;
-    color: aliceblue;
-    text-decoration: none;
-    font-size: 0.85rem;
-    transition: text-shadow 0.3s ease-in-out; /* Smooth transition for the glow effect */
-}
-
-#contact a:hover {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 
-    0 0 10px rgba(255, 255, 255, 0.6); /* Subtle glowing effect */
-}
-
-#contact img{
-    filter: invert(100%);
-    width: 0.85rem;
-}
-
-
-footer {
-    color: aliceblue;
-    background: rgba(45, 45, 45, 0.072);
-    text-align: center;
-    padding: 10px 20px; /* Add padding to the left and right */
-    position: relative;
-    width: 100%;
-    box-sizing: border-box;
-    backdrop-filter: blur(0.2rem); /* Adjust blur radius as needed */
-    -webkit-backdrop-filter: blur(0.2rem); /* For Safari */
-}
-
-footer::before {
-    content: '';
-    display: block;
-    width: calc(100% - 40px); /* Full width minus padding */
-    margin: 0 auto;
-    border-top: 0.15rem solid rgba(240, 248, 255, 0.245);
-    position: absolute;
-    top: 0;
-    left: 20px; /* Match padding */
-    right: 20px; /* Match padding */
-}
-
-footer p {
-    margin: 0;
-}
-
-@keyframes neon {
-    0%, 100% {
-        text-shadow: 
-            0 0 3px rgba(255, 255, 255, 0.5),
-            0 0 5px rgba(255, 255, 255, 0.5),
-            0 0 8px rgba(238, 174, 255, 0.5), /* Pastel violet */
-            0 0 10px rgba(238, 174, 255, 0.5);
-    }
-    35% {
-        text-shadow: 
-            0 0 3px rgba(255, 255, 255, 0.3),
-            0 0 5px rgba(255, 255, 255, 0.3),
-            0 0 8px rgba(238, 174, 255, 0.3), /* Pastel violet */
-            0 0 10px rgba(238, 174, 255, 0.3);
-    }
-}
-
-@media screen and (min-width: 600px) {
-    /* Hide content on larger screens */
-    main, header, footer {
-        display: none;
-    }
-
-    body {
-        background-image: url('background.webp');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh; /* Set the height to 100% of the viewport height */
-        margin: 0; /* Remove default margin */
-        padding: 0; /* Remove default padding */
-        background-color: rgba(0, 0, 0, 0.555);
-    }
-    /* Show a message instead */
-    body::before {
-        content: "ORIENTATION IS NOT yet SUPPORTED";
-        display: block;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 2rem;
-        font-family: Helvetica !important;
-        color: rgb(207, 202, 202);
-        text-align: center;
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-        font-weight: 600;
-        letter-spacing: 0.1rem;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg" href="https://www.svgrepo.com/show/294145/code.svg">
+    <title>AFDIL SAPUTRA</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="afdil"><a href="xafdil.github.io/portfolio/index.html">AFDIL SAPUTRA</a></li>
+                <li id="web">web developer</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <br>
+            <p>A PASSIONATE WEB DEVELOPER SPECIALIZING IN FRONT-END DEVELOPMENT AND DESIGN.
+                GET IN TOUCH IF YOU'D LIKE TO WORK TOGETHER OR JUST SAY HELLO</p>
+        </section>
+        <section id="projects">
+            <br>
+            <br>
+            <h2>PROJECTS</h2>
+            <div class="project1">
+                <h3>BE THE FIRST ONE</h3>
+                <p>CONTACT ME IF YOU ARE INTERESTED</p>
+            </div>
+        </section>
+        <section id="about">
+            <br>
+            <br>
+            <h2>ABOUT ME</h2>
+            <p>BASED IN INDONESIA, I WAS BORN IN 1998 AND STARTED MY HIGHER EDUCATION AT UNIVERSITAS ISLAM RIAU.<br><br> 
+                I GRADUATED WITH A THESIS ON WEB DEVELOPMENT TITLED 'COMPARATIVE ANALYSIS OF CHATGPT AND 
+                GOOGLE BARD IN WEBSITE DEVELOPMENT'.<br><br> ADDITIONALLY, I HOLD A CCNA CISCO CERTIFICATION AND 
+                A CERTIFICATE FROM UNIVERSITI TEKNOLOGI PETRONAS. I BELIEVE I HAVE THE CAPABILITIES TO 
+                START A GREAT JOURNEY IN WEB DEVELOPMENT.</p>
+        </section>        
+        <section id="contact">
+            <br>
+            <br>
+            <h2>CONTACT</h2>
+            <p><a href="https://linkedin.com/in/xafdil" target="_blank">LinkedIn<img src="https://www.svgrepo.com/show/533642/arrow-up-right.svg"></a></p>
+            <p><a href="https://github.com/xafdil" target="_blank">Github<img src="https://www.svgrepo.com/show/533642/arrow-up-right.svg"></a></p>
+            <p><a href="https://instagram.com/xafdil" target="_blank">Instagram<img src="https://www.svgrepo.com/show/533642/arrow-up-right.svg"></a></p>
+            <p><a href="mailto:xafdil@gmail.com">xafdil@gmail.com</a></p>
+        </section>
+    </main>
+    <br>
+    <footer>
+        <p>&copy; M A G N O L I A</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
