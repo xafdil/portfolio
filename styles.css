@@ -18,9 +18,7 @@ header {
     width: 100%;
     padding: 0.2rem 0;
     position: fixed;
-    opacity: 100%;
-    display: flex;
-    justify-content: flex-start;   
+    opacity: 100%; 
 }
 
 header::after {
@@ -35,20 +33,27 @@ header::after {
     right: 5%; /* Adjust right margin to center the border */
 }
 
-#link{
-    font-size: 0.9rem;
-    margin-right: 2rem;
-
-}
-
-nav ul {
+header nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
 }
 
-nav ul li {
+header nav ul li {
+    flex: 1;
     display: inline;
     margin: 0 10px;
+    text-align: center;
+}
+
+header nav ul li:first-child {
+    text-align: left;
+    margin-left: 1.5rem;
+}
+
+header nav ul li:last-child {
+    text-align: right;
+    margin-right: 1.5rem;
 }
 
 nav ul li a {
@@ -75,15 +80,15 @@ p{
 
 #home{
     height: fit-content;
-    text-align: right;
-    width: 27rem;
+    text-align: left;
+    width: 25rem;
     font-size: 1.6rem;
 }
 
 #about{
-    width: 15rem;
+    width: 17rem;
     height: fit-content;
-    text-align: justify;
+    text-align: left;
 }
 
 .project1 {
