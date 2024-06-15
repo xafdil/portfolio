@@ -16,9 +16,9 @@ header {
     background: rgba(0, 0, 0, 0.904);
     color: aliceblue;
     width: 100%;
-    padding: 0.2rem 0;
+    padding: 0.1rem 0;
     position: fixed;
-    opacity: 100%; 
+    letter-spacing: 0.1rem;
 }
 
 header::after {
@@ -26,7 +26,7 @@ header::after {
     display: block;
     width: 90%; /* Adjust width as needed */
     margin: 0 auto;
-    border-bottom: 1.5px solid #fff;
+    border-bottom: 0.1rem solid #fff;
     position: absolute;
     bottom: 0;
     left: 5%; /* Adjust left margin to center the border */
@@ -72,15 +72,18 @@ section {
 
 h1, h2 {
     margin-bottom: 10px;
+    letter-spacing: 0.1rem;
 }
 
 p{
-    font-weight: 600;
+    font-weight: 550;
 }
+
+
 
 #home{
     height: fit-content;
-    text-align: left;
+    text-align: right;
     width: 100%;
     font-size: 1.6rem;
 }
@@ -132,7 +135,7 @@ footer::before {
     display: block;
     width: calc(100% - 40px); /* Full width minus padding */
     margin: 0 auto;
-    border-top: 2px solid #fff;
+    border-top: 0.1rem solid #fff;
     position: absolute;
     top: 0;
     left: 20px; /* Match padding */
