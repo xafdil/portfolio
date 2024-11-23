@@ -218,7 +218,7 @@ footer p {
     }
     /* Show a message instead */
     body::before {
-        content: "PLEASE OPEN WITH your PHONE";
+        content: "PLEASE OPEN WITH YOUR PHONE";
         display: block;
         position: fixed;
         top: 50%;
