@@ -1,60 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/svg" href="https://www.svgrepo.com/show/294145/code.svg">
-    <title>AFDIL SAPUTRA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afdil Saputra</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="https://www.svgrepo.com/show/294145/code.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li id="afdil"><a href="https://xafdil.github.io/portfolio/index.html">AFDIL SAPUTRA</a></li>
-                <li id="web">web developer</li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <br>
-            <p>A PASSIONATE WEB DEVELOPER SPECIALIZING IN FRONT-END DEVELOPMENT AND DESIGN.
-                GET IN TOUCH IF YOU'D LIKE TO WORK TOGETHER OR JUST SAY HELLO</p>
-        </section>
-        <section id="projects">
-            <br>
-            <br>
-            <h2>PROJECTS</h2>
-            <div class="project1">
-                <h3>BE THE FIRST ONE</h3>
-                <p>CONTACT ME IF YOU ARE INTERESTED</p>
-            </div>
-        </section>
-        <section id="about">
-            <br>
-            <br>
-            <h2>ABOUT ME</h2>
-            <p>BASED IN INDONESIA, I WAS BORN IN 1998 AND STARTED MY HIGHER EDUCATION AT UNIVERSITAS ISLAM RIAU.<br><br> 
-                I GRADUATED WITH A THESIS ON WEB DEVELOPMENT TITLED 'COMPARATIVE ANALYSIS OF CHATGPT AND 
-                GOOGLE BARD IN WEBSITE DEVELOPMENT'.<br><br> ADDITIONALLY, I HOLD A CCNA CISCO CERTIFICATION AND 
-                A CERTIFICATE FROM UNIVERSITI TEKNOLOGI PETRONAS. I BELIEVE I HAVE THE CAPABILITIES TO 
-                START A GREAT JOURNEY IN WEB DEVELOPMENT.</p>
-        </section>        
-        <section id="contact">
-            <br>
-            <br>
-            <h2>CONTACT</h2>
-            <p><a href="https://linkedin.com/in/xafdil" target="_blank">LinkedIn<img src="https://www.svgrepo.com/show/533642/arrow-up-right.svg"></a></p>
-            <p><a href="https://github.com/xafdil" target="_blank">Github<img src="https://www.svgrepo.com/show/533642/arrow-up-right.svg"></a></p>
-            <p><a href="https://instagram.com/xafdil" target="_blank">Instagram<img src="https://www.svgrepo.com/show/533642/arrow-up-right.svg"></a></p>
-            <p><a href="mailto:xafdil@gmail.com">xafdil@gmail.com</a></p>
-        </section>
-    </main>
-    <br>
-    <footer>
-        <p>&copy; M A G N O L I A</p>
-    </footer>
-    <script src="main.js"></script>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a data-target="home">HOME</a></li>
+        <li><a data-target="projects">PROJECTS</a></li>
+        <li><a data-target="resume">RESUME</a></li>
+        <li><a data-target="about">ABOUT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <h1>Hello, I'm Afdil Saputra</h1>
+      <p>
+        A passionate web developer/designer blending creativity and logic 
+        to bring digital ideas to life.
+      </p>
+      <div class="contact">
+        <a href="https://github.com/xafdil" target="_blank">
+          <img src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub">
+        </a>
+        <a href="https://linkedin.com/in/xafdil" target="_blank">
+          <img src="https://www.svgrepo.com/show/512419/linkedin-161.svg" alt="LinkedIn">
+        </a>
+        <a href="mailto:xafdil@gmail.com">
+          <img src="https://www.svgrepo.com/show/511917/email-1572.svg" alt="Email">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects hidden">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-card">
+        <a href="https://xafdil.github.io/portfolio/index.html" target="_blank">
+          <h3>Portfolio Website</h3>
+          <p>
+            A clean, minimalistic portfolio site showcasing my work, 
+            built with HTML, CSS, and JavaScript.
+          </p>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="https://xafdil.github.io/analisa-padatan/index.html" target="_blank">
+          <h3>Calculation for PT. SIR</h3>
+          <p>
+            A clean and simple calculation web app to automate 
+            all the manual calculations for PT. SIR.
+          </p>
+        </a>
+      </div>
+      <div class="project-card">
+        <h3>Weather App</h3>
+        <p>
+          A small web app fetching weather data from an API 
+          with real-time updates and clean UI.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume" class="resume hidden">
+    <h2>Resume</h2>
+    <div class="resume-list">
+      <div class="resume-card">
+        <h3>
+          Education 
+          <img src="https://www.svgrepo.com/show/408850/education.svg" alt="Education">
+        </h3>
+        <p><strong>Universitas Islam Riau</strong> — Informatics Engineering (2016–2023)</p>
+
+        <h3>
+          Work Experience 
+          <img src="https://www.svgrepo.com/show/486919/work-case.svg" alt="Work Experience">
+        </h3>
+        <p><strong>Laboratory Analyst</strong> — PT. Subur Berkah Lestari (2024–Present)</p>
+        <p><strong>Assistant Cook</strong> — Rumanegri (2024)</p>
+
+        <h3>
+          Skills 
+          <img src="https://www.svgrepo.com/show/506814/computer.svg" alt="Skills">
+        </h3>
+        <p>HTML / CSS / JavaScript</p>
+        <p>PHP</p>
+        <p>MySQL</p>
+        <p>UI/UX Design</p>
+
+        <a href="resume.pdf" download>
+          <h4>Download full resume here</h4>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about hidden">
+    <h2>About</h2>
+    <div class="about-profile">
+      <img src="PFP2.jpg" alt="Profile Picture">
+    </div>
+    <div class="about-list">
+      <div class="about-card">
+        <p>
+          Hi, I’m Afdil Saputra. When I was 10, I became fascinated with my uncle’s computer, 
+          spending hours exploring and learning how things worked. By the time I was 12, 
+          my curiosity grew so strong that I convinced my father to buy me a laptop. 
+          That’s when my interest in computers truly began to take shape.
+        </p>
+        <p>
+          After graduating high school, I pursued a degree in Informatics Engineering, 
+          where I was introduced to coding and web design. From that point on, 
+          I dedicated myself to developing my skills, continuously improving 
+          and challenging myself to grow as a web developer and designer.
+        </p>
+        <p>
+          One developer I truly look up to is 
+          <a href="https://bryanbraun.com">Bryan Braun</a>, whose work and approach 
+          to coding inspire me to continuously improve my craft.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCRIPTS -->
+  <script src="main.js"></script>
 </body>
 </html>
