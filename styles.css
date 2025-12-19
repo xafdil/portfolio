@@ -5,60 +5,73 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
+  color: whitesmoke;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+
   background-image: url("https://w.wallhaven.cc/full/zm/wallhaven-zm5pxv.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: whitesmoke;
-  line-height: 1.6;
-  height: 100%;
-  overflow: hidden;
 }
 
 /* =========================
-   NAVBAR
+   HEADER / NAVBAR
 ========================= */
 header {
   position: fixed;
+  top: 0;
   width: 100%;
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(2px);
   z-index: 1000;
 }
 
 .navbar {
-  margin: auto;
-  padding: 1.1rem;
+  padding: 1rem;
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-weight: 800;
-  font-size: 0.7rem;
 }
 
 .nav-links {
   display: flex;
   gap: 2rem;
-}
-
-.nav-links li {
   list-style: none;
 }
 
 .nav-links a {
+  font-size: 0.75rem;
+  font-weight: 800;
   text-decoration: none;
   color: whitesmoke;
-  transition: color 0.3s ease;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #a78bfa;
-  filter: invert(70%) sepia(80%) saturate(300%) hue-rotate(280deg);
+}
+
+/* =========================
+   SECTION SHARED
+========================= */
+section {
+  min-height: 100vh;
+  padding: 6rem 1.5rem 2rem;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-40px);
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
 }
 
 /* =========================
@@ -68,48 +81,35 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  min-height: 100vh;
   text-align: center;
-  padding: 2rem;
-  opacity: 1;
-  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.hidden {
-  opacity: 0;
-  transform: translateY(-40px);
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.hero-inner {
+  max-width: 700px;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem);
   font-weight: 700;
 }
 
 .hero p {
   font-family: 'Playfair Display', serif;
-  margin: 1rem 0;
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  margin: 1rem auto;
   max-width: 40rem;
 }
 
 .hero p::after {
   content: "";
   display: block;
-  width: 40rem;
   height: 1px;
-  margin: 1rem auto 0 auto;
+  margin: 1rem auto 0;
   background: linear-gradient(
     to right,
-    transparent 10%,
-    rgba(255, 255, 255, 0.6) 50%,
-    transparent 90%
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
   );
 }
 
@@ -117,22 +117,17 @@ header {
    CONTACT ICONS
 ========================= */
 .contact {
-  margin-top: 1rem;
   display: flex;
   justify-content: center;
   gap: 2rem;
+  margin-top: 1.5rem;
 }
 
-.contact a img {
+.contact img {
   width: 32px;
   height: 32px;
   filter: invert(100%);
-  transition: filter 0.3s ease, opacity 0.3s ease;
-}
-
-.contact a img[alt="Email"] {
-  width: 36px;
-  height: 36px;
+  transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
 .contact a:hover img {
@@ -144,51 +139,43 @@ header {
    PROJECTS
 ========================= */
 .projects {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 100vh;
   text-align: center;
-  padding: 2rem;
-  gap: 2rem;
-  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .projects h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin-bottom: 2rem;
 }
 
 .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
-  width: 100%;
   max-width: 1000px;
+  margin: 0 auto;
 }
 
-.project-list a {
+.project-card {
+  background: rgba(255,255,255,0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card a {
   text-decoration: none;
   color: inherit;
 }
 
-.project-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
 }
 
 .project-card h3 {
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
-  font-size: 1.5rem;
 }
 
 .project-card p {
@@ -200,77 +187,45 @@ header {
    RESUME
 ========================= */
 .resume {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  padding: 5rem 3rem;
   text-align: left;
-  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .resume h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
   text-align: center;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin-bottom: 2rem;
 }
 
 .resume-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
   max-width: 800px;
-  width: 100%;
+  margin: 0 auto;
 }
 
 .resume-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.08);
   padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
 .resume-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
-  color: #fff;
-  border-left: 3px solid #a78bfa;
+  position: relative;
+  font-size: 1.3rem;
+  margin: 1.2rem 0 0.6rem;
   padding-left: 0.6rem;
+  border-left: 3px solid #a78bfa;
 }
 
 .resume-card h3 img {
   position: absolute;
+  right: 0;
+  top: 0;
+  width: 28px;
   filter: invert(100%);
-  width: 32px;
-  height: 32px;
-  margin-left: 0.9rem;
-}
-
-.resume-card h4 {
-  border-radius: 0.5rem;
-  display: flex;
-  font-size: 1rem;
-  margin: 0.8rem 0;
-  color: #ffffff;
-  background-color: #a78bfa;
-  border: 3px solid #a78bfa;
-  padding: 0.3rem;
-  justify-content: center;
-  align-items: center;
-  width: 14rem;
-}
-
-.resume-card a {
-  text-decoration: none;
-}
-
-.resume-card h4:hover {
-  filter: brightness(85%);
 }
 
 .resume-card p {
   font-size: 1rem;
-  opacity: 0.9;
   margin-bottom: 0.4rem;
 }
 
@@ -278,18 +233,33 @@ header {
   color: #fff;
 }
 
+.resume-card a {
+  text-decoration: none;
+}
+
+.resume-card h4 {
+  margin-top: 1rem;
+  padding: 0.4rem;
+  width: fit-content;
+  background-color: #a78bfa;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.resume-card h4:hover {
+  filter: brightness(85%);
+}
+
 /* =========================
    ABOUT
 ========================= */
 .about {
-  min-height: 100vh;
-  padding: 4rem 2rem;
   text-align: center;
-  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .about h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
   margin-bottom: 2rem;
 }
 
@@ -300,31 +270,43 @@ header {
 }
 
 .about-profile img {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid rgba(255, 255, 255, 0.7);
+  border: 3px solid rgba(255,255,255,0.7);
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 .about-card {
   background: rgba(255,255,255,0.08);
-  padding: 1.8rem;
+  padding: 1.5rem;
   border-radius: 1rem;
   max-width: 700px;
   margin: 0 auto;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.7;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
 .about a {
-  text-decoration: none;
   color: #a78bfa;
-  font-weight: 700;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.about a:hover {
-  filter: invert(70%) sepia(80%) saturate(300%) hue-rotate(280deg);
+/* =========================
+   MOBILE TWEAKS
+========================= */
+@media (max-width: 600px) {
+  .nav-links {
+    gap: 1.2rem;
+  }
+
+  .contact {
+    gap: 1.5rem;
+  }
+
+  .resume-card h3 img {
+    display: none;
+  }
 }
